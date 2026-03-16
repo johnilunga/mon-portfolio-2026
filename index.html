@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <div>
+        <div class="titre">
             <a href="index.html">Mon portfolio</a>
         </div>
         
@@ -26,7 +28,7 @@
     <main>
         <section>
             <div>
-                <h1>
+                <h1 class="titre">
                     Bonjour je suis john
                 </h1>
                 <p>
@@ -41,7 +43,7 @@
            
         <section>
           
-             <h2>
+             <h2 class="titre">
                 A propos de moi
             </h2>
             <p>
@@ -57,57 +59,62 @@
             </p>
         </section>
         <section>
-              <h2>
+              <h2 class="titre">
                 Mes compétences
             </h2>
 
             
             <table>
-                <tr>
-                    <th>CATEGORIE</th>
-                    <th>COMPETENCES</th>
-                    <th>NIVEAU</th>
-                </tr>
-                <tr>
-                    <td>Programmation</td>
-                    <td>HTML,CSS,Python,mobile</td>
-                    <td>intermédiaire</td>
+                <thead>
+                    <tr>
+                        <th>CATEGORIE</th>
+                        <th>COMPETENCES</th>
+                        <th>NIVEAU</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Programmation</td>
+                        <td>HTML,CSS,Python,mobile</td>
+                        <td>intermédiaire</td>
 
-                </tr>
-                <tr>
-                    <td>Design</td>
-                    <td>Figma,Photoshop,illustrator</td>
-                    <td>Avancé</td>
-                </tr>
-                <tr>
-                    <td>Langues</td>
-                    <td>Français(natif),Anglais(Basic)</td>
-                    <td>Avancé</td>
-                </tr>
-                <tr>
-                    <td>Outils</td>
-                    <td>Git,Vs Code</td>
-                    <td>Suite office</td>
-                    <td>Avancé</td>
-                </tr>
-                <tr>
-                    <td>Soft Skills</td>
-                    <td>Communication , Résolution de problèmes</td>
-                    <td>Avancé</td>
-                </tr>
-            
+                    </tr>
+                    <tr>
+                        <td>Design</td>
+                        <td>Figma,Photoshop,illustrator</td>
+                        <td>Avancé</td>
+                    </tr>
+                    <tr>
+                        <td>Langues</td>
+                        <td>Français(natif),Anglais(Basic)</td>
+                        <td>Avancé</td>
+                    </tr>
+                    <tr>
+                        <td>Outils</td>
+                        <td>Git,Vs Code</td>
+                        <td>Suite office</td>
+                        <td>Avancé</td>
+                    </tr>
+                    <tr>
+                        <td>Soft Skills</td>
+                        <td>Communication , Résolution de problèmes</td>
+                        <td>Avancé</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
     </main>
     <footer>
-        <p>2026 John.Tous droits réservés</p>
-        <nav>
-            <a href="">linkedlIn</a>
-            <a href="">Git</a>
-            <a href="">X</a>
-            <a href="">Facebook</a>
-            <a href="">Instragram</a>
-        </nav>
+        <p> &copy;2026 John.Tous droits réservés</p>
+        <div>
+            
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-sharp-duotone fa-regular fa-x"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+     
+        </div>
     </footer>
 </body>
 </html>
