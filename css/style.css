@@ -193,9 +193,12 @@ footer a{
     font-size:1.6rem;
     color:white;
     margin:0 10px;
-    transition:color 0.3 ease,transfore 0.2s ease;
+    transition:color 0.3s ease,transfore 0.2s ease;
 }
 footer a:hover{
     color:var(--orange-vif);
     transform:translate(-3px);
+}
+.article{
+    display: grid;
 }
