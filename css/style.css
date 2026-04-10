@@ -414,3 +414,210 @@ footer a:hover{
 .card-footer i {
     font-size: 1rem;
 }
+/* --- Styles spécifiques Passions --- */
+
+.intro-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    font-size: 1.2rem;
+    color: var(--gris-fonce);
+}
+
+.passion-card {
+    position: relative;
+    border: 1px solid transparent;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Point d'état lumineux (comme sur la maquette) */
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #25D366;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #25D366;
+    animation: pulseStatus 2s infinite;
+}
+
+/* --- ANIMATIONS EXTRAORDINAIRES (ETATS CYCLIQUES) --- */
+
+/* Etat 1 : La lueur magique (rappelant la Triforce) */
+@keyframes glowingBorder {
+    0%, 100% { border-color: transparent; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+    50% { border-color: var(--violet-doux); box-shadow: 0 0 25px rgba(108, 99, 255, 0.4); }
+}
+
+/* Etat 2 : Respiration de l'image */
+@keyframes breathingImage {
+    0%, 100% { transform: scale(1); filter: grayscale(0.5); }
+    50% { transform: scale(1.05); filter: grayscale(0); }
+}
+
+/* Application des états avec des délais différents pour chaque carte */
+.passion-card:nth-child(odd) {
+    animation: glowingBorder 6s infinite ease-in-out;
+}
+
+.passion-card:nth-child(even) {
+    animation: glowingBorder 8s infinite ease-in-out 1s;
+}
+
+.passion-card .card-image img {
+    animation: breathingImage 10s infinite ease-in-out;
+}
+
+/* Micro-interaction au survol qui "casse" l'animation cyclique pour donner le contrôle */
+.passion-card:hover {
+    animation-play-state: paused;
+    transform: translateY(-15px) rotate(1deg) !important;
+    border-color: var(--orange-vif) !important;
+    z-index: 10;
+}
+
+.passion-card:hover .status-dot {
+    background-color: var(--orange-vif);
+    box-shadow: 0 0 15px var(--orange-vif);
+}
+
+/* Animation du point d'état */
+@keyframes pulseStatus {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Typographie Designer --- */
+.passion-card h3 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.passion-card .tags li {
+    background: var(--gris-tres-clair);
+    color: var(--violet-fonce);
+    font-weight: bold;
+    border-left: 3px solid var(--violet-doux); /* Style "Design" */
+}
+/* --- Styles spécifiques Divertissement --- */
+
+.divertissement-section {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    font-size: 1.2rem;
+    color: var(--gris-fonce);
+}
+
+/* On utilise la structure de grille existante .article-container */
+.divertissement-section .article-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Plus large pour le style NFT */
+    gap: 2.5rem;
+}
+
+.div-card {
+    position: relative;
+    border: 1px solid transparent;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #fff; /* Fond blanc comme sur ton CSS original */
+}
+
+/* Point d'état lumineux (comme sur la maquette NFT) */
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color:var(--violet-doux);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #25D366;
+    animation: pulseStatus 2s infinite;
+}
+
+/* --- ANIMATIONS EXTRAORDINAIRES (ETATS CYCLIQUES) --- */
+
+/* Etat 1 : La lueur magique (Neon Glow) */
+@keyframes glowingBorder {
+    0%, 100% { border-color: transparent; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+    50% { border-color: var(--violet-doux); box-shadow: 0 0 25px rgba(108, 99, 255, 0.4); }
+}
+
+/* Etat 2 : Respiration de l'image (Zoom lent) */
+@keyframes breathingImage {
+    0%, 100% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.05); filter: brightness(1.1); }
+}
+
+/* Etat 3 : Pulsation douce de la carte */
+@keyframes pulseCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Application des états avec des durées et délais différents */
+.anim-state-1 {
+    animation: glowingBorder 6s infinite ease-in-out;
+}
+
+.anim-state-2 {
+    animation: pulseCard 8s infinite ease-in-out 1s;
+}
+
+.anim-state-3 {
+    animation: glowingBorder 7s infinite ease-in-out 2s, pulseCard 9s infinite ease-in-out 0.5s;
+}
+
+.div-card .card-image img {
+    animation: breathingImage 10s infinite ease-in-out;
+}
+
+/* Micro-interaction au survol qui "casse" l'animation cyclique pour donner le contrôle */
+.div-card:hover {
+    animation-play-state: paused; /* Arrête les animations automatiques */
+    transform: translateY(-15px) rotate(1deg) !important;
+    border-color: var(--orange-vif) !important;
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.div-card:hover .status-dot {
+    background-color: var(--orange-vif);
+    box-shadow: 0 0 15px var(--orange-vif);
+}
+
+.div-card:hover .card-image img {
+    animation-play-state: paused;
+    transform: scale(1.1);
+}
+
+/* Animation du point d'état */
+@keyframes pulseStatus {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Typographie Designer --- */
+.div-card h3 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: var(--violet-fonce);
+}
+
+.div-card .card-content p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+}
